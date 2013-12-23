@@ -3,8 +3,6 @@
     "git": {
       "locked_version": "2.9.0"
     },
-    "hello": {
-      "path": "./site-cookbooks/hello"
     },
     "dmg": {
       "locked_version": "2.1.2"
@@ -23,9 +21,6 @@
     },
     "runit": {
       "locked_version": "1.5.3"
-    },
-    "yum": {
-      "locked_version": "3.0.2"
     },
     "yum-epel": {
       "locked_version": "0.2.0"
