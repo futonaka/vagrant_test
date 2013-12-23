@@ -1,8 +1,27 @@
 {
   "sources": {
+    "yum": {
+      "locked_version": "3.0.2"
+    },
+    "readline": {
+      "locked_version": "0.0.3"
+    },
     "git": {
       "locked_version": "2.9.0"
     },
+    "ruby_build": {
+      "locked_version": "0.8.0"
+    },
+    "rbenv": {
+      "locked_version": "0.7.3",
+      "git": "git://github.com/fnichol/chef-rbenv.git",
+      "ref": "9afb4e5da2e6212504a12de3bbbd410cd96100f6"
+    },
+    "apache2": {
+      "locked_version": "1.8.14"
+    },
+    "mysql": {
+      "locked_version": "4.0.14"
     },
     "dmg": {
       "locked_version": "2.1.2"
@@ -24,6 +43,15 @@
     },
     "yum-epel": {
       "locked_version": "0.2.0"
+    },
+    "java": {
+      "locked_version": "1.17.2"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
     }
   }
 }

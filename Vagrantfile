@@ -83,7 +83,33 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
-    chef.add_recipe "git"
+    chef.json = {
+      rbenv: {
+        user_installs: [{
+          user: "vagrant",
+          rubies: ["2.0.0-p353", "1.9.3-p484"],
+          global: "2.0.0-p353",
+          gems: {
+            "2.0.0-p353" => [
+              {name: "bundler"},
+            ],
+            "1.9.3-p484" => [
+              {name: "bundler"},
+            ]
+          }
+        }]
+      }
+    }
+ 
+    chef.run_list = [
+        "git",
+        "yum",
+        "readline",
+        "apache2",
+        "mysql",
+        "ruby_build",
+        "rbenv::user"
+    ]
   #   chef.cookbooks_path = "../my-recipes/cookbooks"
   #   chef.roles_path = "../my-recipes/roles"
   #   chef.data_bags_path = "../my-recipes/data_bags"
